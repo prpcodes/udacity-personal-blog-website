@@ -25,6 +25,16 @@
     margin-bottom: 1rem;
 }
 
+.bpost-img {
+    width: 100%;
+}
+
+figcaption {
+    margin-bottom: 0;
+    color: var(--desc-color);
+    font-size: var(--figcaption-font-size);
+}
+
 /* ----------- Share Buttons ----------- */
 ul.share-buttons {
     list-style: none;
