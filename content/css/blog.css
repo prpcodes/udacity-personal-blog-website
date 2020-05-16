@@ -1,0 +1,138 @@
+/* ----------- The Main Stylesheet ----------- */
+/* ----------- Overall Definitions ----------- */
+body {
+    margin: 0;
+    font-family: var(--font-family-regular);
+}
+
+h1 {
+    font-family: var(--font-family-h1);
+    font-size: var(--h1-font-size);
+    color: var(--h1-color);
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: var(--font-family-h2);
+    font-size: var(--h2-font-size);
+    color: var(--h2-color);
+    margin: 0;
+}
+
+h3 {
+    font-family: var(--font-family-h3);
+    font-size: var(--h3-font-size);
+    color: var(--h3-color);
+    margin: 0;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------- Sidebar Section ----------- */
+.sidebar {
+    margin: 2rem 3rem;
+}
+
+.avatar img {
+    border-radius: 50%;
+    width: 6rem;
+}
+
+.avatar p {
+    color: var(--desc-color);
+}
+
+.links a{
+    color: var(--link-color);
+    margin-bottom: .25rem;
+    text-decoration: none;
+}
+
+.social {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.social a {
+    color: var(--social-color);
+    text-decoration: none;
+    font-size: var(--icon-font-size);
+    margin-right: .25rem;
+}
+
+/* ----------- Blog Section ----------- */
+.blog-posts {
+    margin: auto 2rem;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 1.5rem;
+}
+
+.bpost {
+    padding: 1rem;
+    box-shadow: 0 .25rem .5rem 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.bpost:hover {
+    box-shadow: 0 .5rem .9375rem 0 rgba(0,0,0,0.2);
+}
+
+.bpost {
+    padding: .625rem .9375rem;
+}
+
+.bpost-content {
+    margin: .5rem 0;
+}
+
+footer {
+    color: var(--desc-color);
+    text-align: center;
+}
+
+/* ----------- Desktop Adjustments ----------- */
+@media screen and (min-width: 960px) {
+    body {
+        display: grid;
+        align-items: start;
+        grid-auto-flow: column;
+        grid-template-columns: 35vw 65vw;
+        grid-template-rows: 10vh 80vh 10vh;
+        grid-template-areas: 
+        "nav nav"
+        "sb bp"
+        "ft ft";
+    }
+    
+    footer {
+        grid-area: ft;
+        align-self: end;
+    }
+
+    .blog-posts {
+        grid-area: bp;
+        justify-self: start;
+        max-width: 35rem;
+    }
+    
+    .sidebar {
+        grid-area: sb;
+        justify-self: end;
+    }
+
+    .blog-posts {
+        margin-top: 1rem;
+    }
+}
