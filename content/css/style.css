@@ -1,6 +1,6 @@
 /* ----------- Stylesheet Import File ----------- */
 @import 'variables.css';
 @import 'blog.css';
-@import '/content/css/icons/all.css';
 @import 'contact.css';
 @import 'blogpost.css';
+@import '/content/css/icons/all.css';

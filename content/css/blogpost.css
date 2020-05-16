@@ -30,9 +30,9 @@
 }
 
 figcaption {
-    margin-bottom: 0;
     color: var(--desc-color);
     font-size: var(--figcaption-font-size);
+    margin-bottom: .5rem;
 }
 
 /* ----------- Share Buttons ----------- */
